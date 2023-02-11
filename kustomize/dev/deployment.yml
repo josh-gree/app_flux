@@ -1,0 +1,1 @@
+image: joshgree/app-flux:1.0.0 # {"$imagepolicy": "flux-system:app-flux-dev"}
