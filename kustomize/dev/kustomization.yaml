@@ -2,4 +2,4 @@
 namespace: dev
 bases:
 - ../base
-namePrefix: dev
+namePrefix: dev-
