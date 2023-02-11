@@ -1,1 +1,12 @@
-image: joshgree/app-flux:1.0.3 # {"$imagepolicy": "flux-system:app-flux-prod"}
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  namespace: default
+spec:
+  replicas: 1
+  template:
+    spec:
+      containers:
+      - name: nginx
+        image: joshgree/app-flux:1.0.3 # {"$imagepolicy": "flux-system:app-flux-prod"}
