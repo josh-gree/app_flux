@@ -1,0 +1,11 @@
+name: Build and Push dev
+on:
+  push:
+    branches: [dev]
+    tags: ['dev-*']
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - run: echo "On Dev - branch has been tagged - gonna tag the branch prod-sha-date/time and push docker image with same tag"

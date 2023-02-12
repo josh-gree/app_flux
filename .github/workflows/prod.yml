@@ -1,0 +1,10 @@
+name: Build and Push prod
+on:
+  push:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-20.04
+    steps:
+      - run: echo "On Prod - gonna tag the branch prod-sha-date/time and push docker image with same tag"
