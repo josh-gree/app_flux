@@ -9,4 +9,4 @@ spec:
     spec:
       containers:
       - name: nginx
-        image: joshgree/app-flux:dev-259a4d55f15e32a665a3c3a9084f9aac0dad960c-1676214065 # {"$imagepolicy": "flux-system:app-flux-dev"}
+        image: joshgree/app-flux:dev-fcc4cd1cf29e92f9862efdac60c8c470615db89a-1676215530 # {"$imagepolicy": "flux-system:app-flux-dev"}
