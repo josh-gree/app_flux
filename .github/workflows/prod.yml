@@ -1,10 +1,17 @@
 name: Build and Push prod
 on:
   push:
-    branches: [main]
+    tags: [prod]
 
 jobs:
   build:
     runs-on: ubuntu-20.04
     steps:
-      - run: echo "On Prod - gonna tag the branch prod-sha-date/time and push docker image with same tag"
+      - name: Checkout
+        uses: actions/checkout@v3
+      - run: |
+         DOCKER_TAG=$(git describe --tags)-$(git rev-parse HEAD)-$(date +%s)
+         echo "DOCKER_TAG=$DOCKER_TAG" >> $GITHUB_ENV
+      - name: check its set
+        run: |
+          echo ${{ env.DOCKER_TAG }}
