@@ -1,7 +1,7 @@
 name: Build and Push prod
 on:
   push:
-    tags: [prod]
+    branches: [prod]
 
 jobs:
   build:

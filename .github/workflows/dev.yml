@@ -1,7 +1,7 @@
-name: Build and Push prod
+name: Build and Push dev
 on:
   push:
-    tags: [dev]
+    branches: [dev]
 
 jobs:
   build:
