@@ -15,4 +15,4 @@ jobs:
       - name: check its set
         run: |
           echo ${{ env.DOCKER_TAG }}
-      - run: docker login -u joshgree -p $DOCKER_PASSWORD
+      - run: docker login -u joshgree -p ${{ secrets.DOCKER_PASSWORD }}
